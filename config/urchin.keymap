@@ -89,7 +89,7 @@
             &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I  &kp O  &kp P 
             &bhm LGUI A  &bhm LALT S  &bhm LSHIFT D &bhm LCTRL F &kp G     &kp H &bhm RCTRL J  &bhm RSHIFT K  &bhm RALT L &bhm RGUI SEMI
             &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N  &kp M  &kp COMMA &kp DOT &kp SQT
-                            &lt MIRROR TAB &lt NUMBER SPACE           &lt NAV RET &sl SYM BSPC
+                            &lt MIRROR TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
             >;
         };
 
