@@ -93,7 +93,7 @@
         // CAPS WORD
         combo_capsword {
             timeout-ms = <100>;
-            key-positions = <13 18>;
+            key-positions = <12 17>;
             bindings = <&caps_word>;
         };
     };
@@ -153,7 +153,7 @@
             &kp N9   &kp N8    &kp N7   &kp N6    &kp N5         &kp F5  &kp F6  &kp F7  &kp F8 &kp F9
                                         &trans    &trans         &trans  &trans 
             >;
-        };}
+        };
 
         // Used to change the keyboard's settings.
         set_layer {
