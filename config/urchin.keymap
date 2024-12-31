@@ -68,15 +68,33 @@
         compatible = "zmk,combos";
         // both right thumb keys
         combo_accent {
-            timeout-ms = <200>;
+            timeout-ms = <100>;
             key-positions = <32 33>;
             bindings = <&mo SETTINGS>;
         };
         // both left thumb keys
         combo_settings {
-            timeout-ms = <200>;
+            timeout-ms = <100>;
             key-positions = <30 31>;
             bindings = <&mo SETTINGS>;
+        };
+        // Left GUI
+        combo_settings {
+            timeout-ms = <100>;
+            key-positions = <01 11>;
+            bindings = <&kp LGUI>;
+        };
+        // Right GUI
+        combo_settings {
+            timeout-ms = <100>;
+            key-positions = <10 20>;
+            bindings = <&kp RGUI>;
+        };
+        // CAPS WORD
+        combo_settings {
+            timeout-ms = <100>;
+            key-positions = <13 18>;
+            bindings = <&caps_word>;
         };
     };
 
@@ -87,7 +105,7 @@
             label = "Base";
             bindings = <
             &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I  &kp O  &kp P 
-            &bhm LGUI A  &bhm LALT S  &bhm LSHIFT D &bhm LCTRL F &kp G     &kp H &bhm RCTRL J  &bhm RSHIFT K  &bhm RALT L &bhm RGUI SEMI
+            &kp A  &bhm LALT S  &bhm LSHIFT D &bhm LCTRL F &kp G     &kp H &bhm RCTRL J  &bhm RSHIFT K  &bhm RALT L &kp SEMI
             &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N  &kp M  &kp COMMA &kp DOT &kp SQT
                             &lt MIRROR TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
             >;
@@ -135,7 +153,7 @@
             &kp N9   &kp N8    &kp N7   &kp N6    &kp N5         &kp F5  &kp F6  &kp F7  &kp F8 &kp F9
                                         &trans    &trans         &trans  &trans 
             >;
-        };
+        };}
 
         // Used to change the keyboard's settings.
         set_layer {
