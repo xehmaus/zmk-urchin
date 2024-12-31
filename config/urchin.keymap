@@ -79,19 +79,19 @@
             bindings = <&mo SETTINGS>;
         };
         // Left GUI
-        combo_settings {
+        combo_LGUI {
             timeout-ms = <100>;
-            key-positions = <01 11>;
+            key-positions = <0 10>;
             bindings = <&kp LGUI>;
         };
         // Right GUI
-        combo_settings {
+        combo_RGUI {
             timeout-ms = <100>;
-            key-positions = <10 20>;
+            key-positions = <9 19>;
             bindings = <&kp RGUI>;
         };
         // CAPS WORD
-        combo_settings {
+        combo_capsword {
             timeout-ms = <100>;
             key-positions = <13 18>;
             bindings = <&caps_word>;
