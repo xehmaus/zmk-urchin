@@ -81,32 +81,32 @@
 		// 1110 - CONTROL
 		// 0111 - SHIFT
 		// 1101 - ALT
-        combo_settings {
+        combo_lctrl {
             timeout-ms = <50>;
             key-positions = <10 11 12>;
             bindings = <&kp LCTRL>;
         };
-        combo_settings {
+        combo_rctrl {
             timeout-ms = <50>;
             key-positions = <19 18 17>;
             bindings = <&kp RCTRL>;
         };
-        combo_settings {
+        combo_lshft {
             timeout-ms = <50>;
             key-positions = <11 12 13>;
-            bindings = <&kp LShft>;
+            bindings = <&kp LSHFT>;
         };
-        combo_settings {
+        combo_rshft {
             timeout-ms = <50>;
             key-positions = <18 17 16>;
             bindings = <&kp RSHFT>;
         };
-        combo_settings {
+        combo_lalt {
             timeout-ms = <50>;
             key-positions = <10 11 13>;
             bindings = <&kp LALT>;
         };
-        combo_settings {
+        combo_ralt {
             timeout-ms = <50>;
             key-positions = <19 18 16>;
             bindings = <&kp RALT>;
