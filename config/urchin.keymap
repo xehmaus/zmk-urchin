@@ -16,8 +16,8 @@
 #define BASE 0
 #define NAV 1
 #define SYM 2
-#define NUMBER 4
-#define SETTINGS 5
+#define NUMBER 3
+#define SETTINGS 4
 // -----------------
 
 &sk {
@@ -120,12 +120,12 @@
             label = "Base";
             bindings = <
             &kp Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U  &kp Y  &kp SEMI
-            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp I  &kp I  &kp O   
-            &kp Z  &kp X  &kp D  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
+            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E  &kp I  &kp O   
+            &kp Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
                &lt SYM TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
             >;
         };
-
+ 
         // Navigation Layer
         nav_layer {
             label = "Nav.";
