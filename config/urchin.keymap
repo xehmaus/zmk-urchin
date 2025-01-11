@@ -16,7 +16,6 @@
 #define BASE 0
 #define NAV 1
 #define SYM 2
-#define MIRROR 3
 #define NUMBER 4
 #define SETTINGS 5
 // -----------------
@@ -78,23 +77,39 @@
             key-positions = <30 31>;
             bindings = <&mo SETTINGS>;
         };
-        // Left GUI
-        combo_LGUI {
-            timeout-ms = <100>;
-            key-positions = <0 10>;
-            bindings = <&kp LGUI>;
+        // TIPLE combo mods
+		// 1110 - CONTROL
+		// 0111 - SHIFT
+		// 1101 - ALT
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <10 11 12>;
+            bindings = <&kp LCTRL>;
         };
-        // Right GUI
-        combo_RGUI {
-            timeout-ms = <100>;
-            key-positions = <9 19>;
-            bindings = <&kp RGUI>;
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <19 18 17>;
+            bindings = <&kp RCTRL>;
         };
-        // CAPS WORD
-        combo_capsword {
-            timeout-ms = <100>;
-            key-positions = <12 17>;
-            bindings = <&caps_word>;
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&kp LShft>;
+        };
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <18 17 16>;
+            bindings = <&kp RSHFT>;
+        };
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <10 11 13>;
+            bindings = <&kp LALT>;
+        };
+        combo_settings {
+            timeout-ms = <50>;
+            key-positions = <19 18 16>;
+            bindings = <&kp RALT>;
         };
     };
 
@@ -104,10 +119,10 @@
         default_layer {
             label = "Base";
             bindings = <
-            &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I  &kp O  &kp P 
-            &kp A  &bhm LALT S  &bhm LSHIFT D &bhm LCTRL F &kp G     &kp H &bhm RCTRL J  &bhm RSHIFT K  &bhm RALT L &kp SEMI
-            &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N  &kp M  &kp COMMA &kp DOT &kp SQT
-                            &lt MIRROR TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
+            &kp Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U  &kp Y  &kp SEMI
+            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp I  &kp I  &kp O   
+            &kp Z  &kp X  &kp D  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
+               &lt SYM TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
             >;
         };
 
@@ -115,10 +130,10 @@
         nav_layer {
             label = "Nav.";
             bindings = <
-            &trans  &trans  &trans  &trans  &trans      &kp CAPS   &kp PG_UP  &kp UP    &kp INS    &kp ESC
-			&trans  &trans  &trans  &trans  &trans      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END
-			&trans  &trans  &trans  &trans  &trans      &kp KP_NUM &kp PG_DN  &kp BSPC  &kp DEL    &trans
-			                        &trans  &trans      &trans     &trans
+            &trans   &trans   &trans    &trans    &trans      &kp CAPS   &kp PG_UP  &kp UP    &kp INS    &kp ESC
+			&kp LGUI &kp LALT &kp LSHFT &kp LCTRL &trans      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END
+			&trans   &trans   &trans    &trans    &trans      &kp KP_NUM &kp PG_DN  &kp BSPC  &kp DEL    &trans
+			                            &trans    &trans      &trans     &trans
             >;
         };
 
@@ -133,16 +148,6 @@
             >;
         };
 
-        // Mirrored left hand and numpad values on the right
-        mir_layer {
-            label = "Mir.";
-            bindings = <
-            &kp P    &kp O     &kp I   &kp U  &kp Y        &kp KP_PLUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 
-            &sk SEMI &sk L     &sk K   &sk J  &kp H        &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_DOT
-            &kp SQT  &kp COMMA &kp DOT &kp M  &kp N        &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY 
-                               &trans  &trans              &kp KP_ENTER &trans  
-            >;
-        };
 
         // Left Hand Numbers, Right hand function layer
         num_layer {
@@ -159,10 +164,10 @@
         set_layer {
                 label = "Set.";
                 bindings = <
-                &none       &none &none      &bt BT_SEL 0 &bt BT_SEL 3        &none &none &none &none    &none 
-                &none       &none &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 4        &none &none &none &none    &none
-                &bootloader &none &none      &bt BT_SEL 2 &bt BT_SEL 5        &none &none &none &unstick &bootloader
-                                             &none        &none               &none &none 
+                &bt BT_CLR  &none    &none     &none     &bt BT_SEL 0     &bt BT_SEL 3 &none     &none     &none       &none 
+                &kp LGUI    &kp LALT &kp LSHFT &kp LCTRL &bt BT_SEL 1     &bt BT_SEL 4 &kp RCTRL &kp RSHFT &kp RALT    &kp RGUI
+                &bootloader &none    &none     &none     &bt BT_SEL 2     &bt BT_SEL 5 &none     &none     &unstick    &bootloader
+                                               &none     &none            &none        &none 
                 >;
         };
     };
