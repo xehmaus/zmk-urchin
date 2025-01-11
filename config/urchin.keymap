@@ -81,35 +81,51 @@
 		// 1110 - CONTROL
 		// 0111 - SHIFT
 		// 1101 - ALT
+		// 1111 - GUI
         combo_lctrl {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <10 11 12>;
             bindings = <&kp LCTRL>;
         };
         combo_rctrl {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <19 18 17>;
             bindings = <&kp RCTRL>;
         };
         combo_lshft {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <11 12 13>;
             bindings = <&kp LSHFT>;
         };
         combo_rshft {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <18 17 16>;
             bindings = <&kp RSHFT>;
         };
         combo_lalt {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <10 11 13>;
             bindings = <&kp LALT>;
         };
         combo_ralt {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <19 18 16>;
             bindings = <&kp RALT>;
+        };
+        combo_lgui {
+            timeout-ms = <100>;
+            key-positions = <10 11 12 13>;
+            bindings = <&kp LALT>;
+        };
+        combo_rgui {
+            timeout-ms = <100>;
+            key-positions = <19 18 17 16>;
+            bindings = <&kp RALT>;
+        };
+        combo_capsword {
+            timeout-ms = <200>;
+            key-positions = <11 12 13 18 17 16>;
+            bindings = <&caps_word>;
         };
     };
 
