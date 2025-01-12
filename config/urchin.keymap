@@ -115,16 +115,16 @@
         combo_lgui {
             timeout-ms = <100>;
             key-positions = <10 11 12 13>;
-            bindings = <&kp LALT>;
+            bindings = <&kp LGUI>;
         };
         combo_rgui {
             timeout-ms = <100>;
             key-positions = <19 18 17 16>;
-            bindings = <&kp RALT>;
+            bindings = <&kp RGUI>;
         };
         combo_capsword {
             timeout-ms = <200>;
-            key-positions = <11 12 13 18 17 16>;
+            key-positions = <12 17>;
             bindings = <&caps_word>;
         };
     };
