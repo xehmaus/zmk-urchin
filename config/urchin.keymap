@@ -165,7 +165,7 @@
             >;
         };
 
-        // Left Hand Numbers, Right hand function layer
+        // Left Hand Numbers, Right hand modifiers
         num_layer {
             label = "Num.";
             bindings = <
@@ -176,8 +176,8 @@
             >;
         };
 
-        // Left Hand Numbers, Right hand function layer
-        num_layer {
+        // Left modifiers, Right hand function layer
+        function_layer {
             label = "Function.";
             bindings = <
             &trans   &trans     &trans    &trans    &trans        &trans  &kp F11 &kp F12 &trans &trans
