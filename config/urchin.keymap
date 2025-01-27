@@ -17,7 +17,8 @@
 #define NAV 1
 #define SYM 2
 #define NUMBER 3
-#define SETTINGS 4
+#define FUNCTION 4
+#define SETTINGS 5
 // -----------------
 
 &sk {
@@ -84,32 +85,32 @@
 		// 1111 - GUI
         combo_lctrl {
             timeout-ms = <100>;
-            key-positions = <10 11 12>;
+            key-positions = <12 13>;
             bindings = <&kp LCTRL>;
         };
         combo_rctrl {
             timeout-ms = <100>;
-            key-positions = <19 18 17>;
+            key-positions = <16 17>;
             bindings = <&kp RCTRL>;
         };
         combo_lshft {
             timeout-ms = <100>;
-            key-positions = <11 12 13>;
+            key-positions = <11 12>;
             bindings = <&kp LSHFT>;
         };
         combo_rshft {
             timeout-ms = <100>;
-            key-positions = <18 17 16>;
+            key-positions = <17 18>;
             bindings = <&kp RSHFT>;
         };
         combo_lalt {
             timeout-ms = <100>;
-            key-positions = <10 11 13>;
+            key-positions = <10 11>;
             bindings = <&kp LALT>;
         };
         combo_ralt {
             timeout-ms = <100>;
-            key-positions = <19 18 16>;
+            key-positions = <19 18>;
             bindings = <&kp RALT>;
         };
         combo_lgui {
@@ -138,7 +139,7 @@
             &kp Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U  &kp Y  &kp SEMI
             &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E  &kp I  &kp O   
             &kp Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
-               &lt SYM TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
+               &lt FUNCTION TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
             >;
         };
  
@@ -164,15 +165,25 @@
             >;
         };
 
-
         // Left Hand Numbers, Right hand function layer
         num_layer {
             label = "Num.";
             bindings = <
-            &kp STAR &kp MINUS &kp PLUS &kp EQUAL &kp DOT        &trans  &kp F11 &kp F12 &trans &trans
-            &kp N4   &kp N3    &kp N2   &kp N1    &kp N0         &kp F10 &kp F1  &kp F2  &kp F3 &kp F4
-            &kp N9   &kp N8    &kp N7   &kp N6    &kp N5         &kp F5  &kp F6  &kp F7  &kp F8 &kp F9
-                                        &trans    &trans         &trans  &trans 
+            &kp STAR &kp MINUS &kp PLUS &kp EQUAL &kp DOT        &trans   &trans    &trans    &trans   &trans
+            &kp N4   &kp N3    &kp N2   &kp N1    &kp N0         &trans   &kp RCTRL &kp RSHFT &kp RALT &kp RGUI
+            &kp N9   &kp N8    &kp N7   &kp N6    &kp N5         &trans   &trans    &trans    &trans   &trans
+                                        &trans    &trans         &trans   &trans
+            >;
+        };
+
+        // Left Hand Numbers, Right hand function layer
+        num_layer {
+            label = "Function.";
+            bindings = <
+            &trans   &trans     &trans    &trans    &trans        &trans  &kp F11 &kp F12 &trans &trans
+            &kp LGUI &kp LALT   &kp LSHFT &kp LCTRL &trans        &kp F10 &kp F1  &kp F2  &kp F3 &kp F4
+            &kp LC(Z) &kp LC(X) &kp LC(C) &trans    &kp LC(V)     &kp F5  &kp F6  &kp F7  &kp F8 &kp F9
+                                        &trans      &trans        &trans  &trans 
             >;
         };
 
