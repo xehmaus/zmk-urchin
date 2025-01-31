@@ -85,32 +85,32 @@
 		// 1111 - GUI
         combo_lctrl {
             timeout-ms = <100>;
-            key-positions = <12 13>;
+            key-positions = <10 11 12>;
             bindings = <&kp LCTRL>;
         };
         combo_rctrl {
             timeout-ms = <100>;
-            key-positions = <16 17>;
+            key-positions = <17 18 19>;
             bindings = <&kp RCTRL>;
         };
         combo_lshft {
             timeout-ms = <100>;
-            key-positions = <11 12>;
+            key-positions = <11 12 13>;
             bindings = <&kp LSHFT>;
         };
         combo_rshft {
             timeout-ms = <100>;
-            key-positions = <17 18>;
+            key-positions = <16 17 18>;
             bindings = <&kp RSHFT>;
         };
         combo_lalt {
             timeout-ms = <100>;
-            key-positions = <10 11>;
+            key-positions = <10 11 13>;
             bindings = <&kp LALT>;
         };
         combo_ralt {
             timeout-ms = <100>;
-            key-positions = <19 18>;
+            key-positions = <16 19 18>;
             bindings = <&kp RALT>;
         };
         combo_lgui {
