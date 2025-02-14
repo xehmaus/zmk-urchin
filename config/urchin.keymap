@@ -14,11 +14,12 @@
 
 // Layer definitions
 #define BASE 0
-#define NAV 1
-#define SYM 2
-#define NUMBER 3
-#define FUNCTION 4
-#define SETTINGS 5
+#define FLIP 1
+#define NAV 2
+#define NUM 3
+#define SYM 4 
+#define FUN 5
+#define SET 6
 // -----------------
 
 &sk {
@@ -70,15 +71,15 @@
         combo_accent {
             timeout-ms = <100>;
             key-positions = <32 33>;
-            bindings = <&mo SETTINGS>;
+            bindings = <&mo SET>;
         };
         // both left thumb keys
         combo_settings {
             timeout-ms = <100>;
             key-positions = <30 31>;
-            bindings = <&mo SETTINGS>;
+            bindings = <&mo SET>;
         };
-        // TIPLE combo mods
+        // TRIPLE combo mods
 		// 1110 - CONTROL
 		// 0111 - SHIFT
 		// 1101 - ALT
@@ -86,47 +87,67 @@
         combo_lctrl {
             timeout-ms = <100>;
             key-positions = <10 11 12>;
-            bindings = <&kp LCTRL>;
+            bindings = <&sk LCTRL>;
         };
         combo_rctrl {
             timeout-ms = <100>;
             key-positions = <17 18 19>;
-            bindings = <&kp RCTRL>;
+            bindings = <&sk RCTRL>;
         };
         combo_lshft {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&kp LSHFT>;
+            bindings = <&sk LSHFT>;
         };
         combo_rshft {
             timeout-ms = <100>;
             key-positions = <16 17 18>;
-            bindings = <&kp RSHFT>;
+            bindings = <&sk RSHFT>;
         };
         combo_lalt {
             timeout-ms = <100>;
             key-positions = <10 11 13>;
-            bindings = <&kp LALT>;
+            bindings = <&sk LALT>;
         };
         combo_ralt {
             timeout-ms = <100>;
             key-positions = <16 19 18>;
-            bindings = <&kp RALT>;
+            bindings = <&sk RALT>;
         };
         combo_lgui {
             timeout-ms = <100>;
             key-positions = <10 11 12 13>;
-            bindings = <&kp LGUI>;
+            bindings = <&sk LGUI>;
         };
         combo_rgui {
             timeout-ms = <100>;
             key-positions = <19 18 17 16>;
-            bindings = <&kp RGUI>;
+            bindings = <&sk RGUI>;
         };
         combo_capsword {
             timeout-ms = <200>;
             key-positions = <12 17>;
             bindings = <&caps_word>;
+        };
+        combo_capsword2 {
+            timeout-ms = <200>;
+            key-positions = <11 12 14>;
+            bindings = <&caps_word>;
+        };
+		combo_nav {
+            timeout-ms = <100>;
+            key-positions = <3  11 13  >;
+            bindings = <&tog NAV>;
+        };		
+        combo_esc {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <100>;
+            key-positions = <2 3>;
+            bindings = <&kp TAB>;
         };
     };
 
@@ -136,10 +157,21 @@
         default_layer {
             label = "Base";
             bindings = <
-            &kp Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U  &kp Y  &kp SEMI
-            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E  &kp I  &kp O   
-            &kp Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
-               &lt FUNCTION TAB &lt NUMBER SPACE           &lt NAV RET &lt SYM BSPC
+            &lt SYM Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U     &kp Y   &kp SEMI
+            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
+            &lt NUM Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
+               &kp RET &lt FLIP SPACE              &kp BSPC &lt DEL
+            >;
+        };
+		
+        // Flip for 1 handed
+        flip_layer {
+            label = "Flip";
+            bindings = <
+            &kp Q    &kp Y    &kp U  &kp L  &kp J       &trans   &trans   &trans    &trans    &trans 
+            &kp O    &kp I    &kp E  &kp N  &kp M       &trans   &trans   &trans    &trans    &trans 
+            &kp SQT  &kp DOT  &kp COMMA  &kp H  &kp K   &trans   &trans   &trans    &trans    &trans 
+                             &trans &trans              &trans   &trans   
             >;
         };
  
@@ -147,21 +179,10 @@
         nav_layer {
             label = "Nav.";
             bindings = <
-            &trans   &trans   &trans    &trans    &trans      &kp CAPS   &kp PG_UP  &kp UP    &kp INS    &kp ESC
-			&kp LGUI &kp LALT &kp LSHFT &kp LCTRL &trans      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END
-			&trans   &trans   &trans    &trans    &trans      &kp KP_NUM &kp PG_DN  &kp BSPC  &kp DEL    &trans
-			                            &trans    &trans      &trans     &trans
-            >;
-        };
-
-        // Symbol Layer (LH matches number shift symbols)
-        sym_layer {
-            label = "Sym.";
-            bindings = <
-            &kp STAR  &kp MINUS  &kp PLUS  &kp EQUAL  &kp DOT        &trans     &kp PIPE  &kp QMARK  &kp TILDE  &kp GRAVE
-			&kp DLLR  &kp HASH   &kp AT    &kp EXCL   &kp RPAR       &kp UNDER  &kp FSLH  &kp LPAR   &kp LBKT   &kp LBRC
-			&kp LPAR  &kp STAR   &kp AMPS  &kp CARET  &kp PRCNT      &trans     &kp BSLH  &kp RPAR   &kp RBKT   &kp RBRC
-			                                     &trans  &trans      &trans     &trans
+            &kp LC(W) &trans   &kp UP   &kp PG_UP &kp TAB      &trans   &trans   &trans    &trans    &trans 
+			&kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END      &trans   &trans   &trans    &trans    &trans 
+			&kp LCTRL &kp BSPC &kp DEL  &kp PG_DN &kp INS      &trans   &trans   &trans    &trans    &trans 
+			                            &kp LALT  &qt LSHFT RET      &trans   &trans   
             >;
         };
 
@@ -169,10 +190,21 @@
         num_layer {
             label = "Num.";
             bindings = <
-            &kp STAR &kp MINUS &kp PLUS &kp EQUAL &kp DOT        &trans   &trans    &trans    &trans   &trans
-            &kp N4   &kp N3    &kp N2   &kp N1    &kp N0         &trans   &kp RCTRL &kp RSHFT &kp RALT &kp RGUI
-            &kp N9   &kp N8    &kp N7   &kp N6    &kp N5         &trans   &trans    &trans    &trans   &trans
-                                        &trans    &trans         &trans   &trans
+            &trans   &kp N9 &kp N8 &kp N7 &kp PLUS                &trans   &trans   &trans    &trans    &trans 
+            &trans   &kp N6 &kp N5 &kp N4 &kp DOT       &trans   &trans   &trans    &trans    &trans 
+            &trans   &kp N3 &kp N2 &kp N1 &kp N0        &trans   &trans   &trans    &trans    &trans 
+                                        &kp EQUAL &qt LSHFT RET        &trans   &trans
+            >;
+        };
+
+        // Symbol Layer (LH matches number shift symbols)
+        sym_layer {
+            label = "Sym.";
+            bindings = <
+            &trans  &kp GRAVE  &kp TILDE &kp QMARK  &kp PIPE      &trans   &trans   &trans    &trans    &trans 
+			&trans  &kp LBKT   &kp RBKT  &kp FSLH   &kp UNDER     &trans   &trans   &trans    &trans    &trans 
+			&trans  &kp BSPC  &kp DEL    &kp BSLH  &kp MINUS      &trans   &trans   &trans    &trans    &trans 
+			                                     &trans  &kp LSHFT      &trans     &trans
             >;
         };
 
@@ -180,10 +212,10 @@
         function_layer {
             label = "Function.";
             bindings = <
-            &trans   &trans     &trans    &trans    &trans        &trans  &kp F11 &kp F12 &trans &trans
-            &kp LGUI &kp LALT   &kp LSHFT &kp LCTRL &trans        &kp F10 &kp F1  &kp F2  &kp F3 &kp F4
-            &kp LC(Z) &kp LC(X) &kp LC(C) &trans    &kp LC(V)     &kp F5  &kp F6  &kp F7  &kp F8 &kp F9
-                                        &trans      &trans        &trans  &trans 
+            &trans   &kp F9 &kp F8 &kp F7 &kp F12                &trans   &trans   &trans    &trans    &trans 
+            &trans   &kp F6 &kp F5 &kp F4 &kp F11       &trans   &trans   &trans    &trans    &trans 
+            &trans   &kp F3 &kp F2 &kp F1 &kp F10       &trans   &trans   &trans    &trans    &trans 
+                                        &kp EQUAL &qt LSHFT RET        &trans   &trans
             >;
         };
 
