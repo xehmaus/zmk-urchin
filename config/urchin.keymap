@@ -74,7 +74,7 @@
             bindings = <&tog NAV>;
         };	
 		// function top row
-		combo_nav {
+		combo_fun {
             timeout-ms = <100>;
             key-positions = <0 1 2 3>;
             bindings = <&tog FUN>;
