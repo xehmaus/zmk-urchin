@@ -77,7 +77,7 @@
 		combo_fun {
             timeout-ms = <100>;
             key-positions = <0 1 2 3>;
-            bindings = <&tog FUN>;
+            bindings = <&sl FUN>;
         };	
         // both right thumb keys
         combo_accent {
@@ -170,8 +170,8 @@
             &lt SYM Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U     &kp Y   &kp SEMI
             &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
             &lt NUM Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
-               &kp RET &lt FLIP SPACE              &kp BSPC &tog NAV
-            >;
+               &lt NAV RET &lt FLIP SPACE              &kp BSPC &kp DEL       
+			   >;
         };
 		
         // Flip for 1 handed
@@ -189,10 +189,10 @@
         nav_layer {
             label = "Nav.";
             bindings = <
-            &kp LC(W) &trans   &kp UP   &kp PG_UP &kp TAB      &trans   &trans   &trans    &trans    &trans 
+            &kp LC(W) &kp ENT  &kp UP   &kp PG_UP &kp TAB      &trans   &trans   &trans    &trans    &trans 
 			&kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END      &trans   &trans   &trans    &trans    &trans 
 			&kp LCTRL &kp BSPC &kp DEL  &kp PG_DN &kp INS      &trans   &trans   &trans    &trans    &trans 
-			                            &kp LALT  &qt LSHFT RET      &trans   &trans   
+			                            &kp LALT  &qt LSHFT SPACE      &trans   &trans   
             >;
         };
 
@@ -203,7 +203,7 @@
             &trans   &kp N9 &kp N8 &kp N7 &kp PLUS                &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N6 &kp N5 &kp N4 &kp DOT       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N3 &kp N2 &kp N1 &kp N0        &trans   &trans   &trans    &trans    &trans 
-                                        &kp EQUAL &qt LSHFT RET        &trans   &trans
+                                  &kp ENT      &qt wLSHFT EQUAL       &trans   &trans
             >;
         };
 
@@ -225,7 +225,7 @@
             &trans   &kp F9 &kp F8 &kp F7 &kp F12                &trans   &trans   &trans    &trans    &trans 
             &trans   &kp F6 &kp F5 &kp F4 &kp F11       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp F3 &kp F2 &kp F1 &kp F10       &trans   &trans   &trans    &trans    &trans 
-                                        &kp EQUAL &qt LSHFT RET        &trans   &trans
+                                        &trans &trans        &trans   &trans
             >;
         };
 
