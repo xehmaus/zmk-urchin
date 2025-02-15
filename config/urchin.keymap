@@ -171,7 +171,7 @@
             &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
             &lt NUM Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
                &lt NAV RET &lt FLIP SPACE              &kp BSPC &kp DEL       
-			   >;
+			>;
         };
 		
         // Flip for 1 handed
