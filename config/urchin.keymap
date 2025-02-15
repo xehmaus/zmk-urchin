@@ -168,7 +168,7 @@
             label = "Base";
             bindings = <
             &lt SYM Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U     &kp Y   &kp SEMI
-            &kp A  &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
+            &kp A      &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
             &lt NUM Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
                &lt NAV RET &lt FLIP SPACE              &kp BSPC &kp DEL       
 			>;
@@ -178,8 +178,8 @@
         flip_layer {
             label = "Flip";
             bindings = <
-            &kp Q    &kp Y    &kp U  &kp L  &kp J       &trans   &trans   &trans    &trans    &trans 
-            &kp O    &kp I    &kp E  &kp N  &kp M       &trans   &trans   &trans    &trans    &trans 
+            &kp Q    &kp Y    &kp U      &kp L  &kp J   &trans   &trans   &trans    &trans    &trans 
+            &kp O    &kp I    &kp E      &kp N  &kp M   &trans   &trans   &trans    &trans    &trans 
             &kp SQT  &kp DOT  &kp COMMA  &kp H  &kp K   &trans   &trans   &trans    &trans    &trans 
                              &trans &trans              &trans   &trans   
             >;
@@ -189,10 +189,10 @@
         nav_layer {
             label = "Nav.";
             bindings = <
-            &kp LC(W) &kp ENT  &kp UP   &kp PG_UP &kp TAB      &trans   &trans   &trans    &trans    &trans 
-			&kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END      &trans   &trans   &trans    &trans    &trans 
-			&kp LCTRL &kp BSPC &kp DEL  &kp PG_DN &kp INS      &trans   &trans   &trans    &trans    &trans 
-			                            &kp LALT  &qt LSHFT SPACE      &trans   &trans   
+            &kp Q    &kp Y    &kp U      &kp L  &kp J   &trans   &trans   &trans    &trans    &trans 
+            &kp O    &kp I    &kp E      &kp N  &kp M   &trans   &trans   &trans    &trans    &trans 
+            &kp SQT  &kp DOT  &kp COMMA  &kp H  &kp K   &trans   &trans   &trans    &trans    &trans 
+                             &trans &trans              &trans   &trans   
             >;
         };
 
@@ -200,7 +200,7 @@
         num_layer {
             label = "Num.";
             bindings = <
-            &trans   &kp N9 &kp N8 &kp N7 &kp PLUS                &trans   &trans   &trans    &trans    &trans 
+            &trans   &kp N9 &kp N8 &kp N7 &kp PLUS       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N6 &kp N5 &kp N4 &kp DOT       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N3 &kp N2 &kp N1 &kp N0        &trans   &trans   &trans    &trans    &trans 
                                   &kp ENT      &qt LSHFT EQUAL       &trans   &trans
