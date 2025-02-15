@@ -189,10 +189,10 @@
         nav_layer {
             label = "Nav.";
             bindings = <
-            &kp Q    &kp Y    &kp U      &kp L  &kp J   &trans   &trans   &trans    &trans    &trans 
-            &kp O    &kp I    &kp E      &kp N  &kp M   &trans   &trans   &trans    &trans    &trans 
-            &kp SQT  &kp DOT  &kp COMMA  &kp H  &kp K   &trans   &trans   &trans    &trans    &trans 
-                             &trans &trans              &trans   &trans   
+            &kp LC(W) &kp RET  &kp UP   &kp PG_UP &kp TAB      &trans   &trans   &trans    &trans    &trans 
+			&kp HOME  &kp LEFT &kp DOWN &kp RIGHT &kp END      &trans   &trans   &trans    &trans    &trans 
+			&kp LCTRL &kp BSPC &kp DEL  &kp PG_DN &kp INS      &trans   &trans   &trans    &trans    &trans 
+			                            &kp LALT  &qt LSHFT SPACE      &trans   &trans   
             >;
         };
 
@@ -203,7 +203,7 @@
             &trans   &kp N9 &kp N8 &kp N7 &kp PLUS       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N6 &kp N5 &kp N4 &kp DOT       &trans   &trans   &trans    &trans    &trans 
             &trans   &kp N3 &kp N2 &kp N1 &kp N0        &trans   &trans   &trans    &trans    &trans 
-                                  &kp ENT      &kp EQUAL       &trans   &trans
+                                  &kp RET      &qt LSHFT EQUAL       &trans   &trans
             >;
         };
 
