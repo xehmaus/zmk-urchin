@@ -114,6 +114,18 @@
             key-positions = <2 3>;
             bindings = <&kp TAB>;
         };
+		// tab
+        combo_bkp {
+            timeout-ms = <100>;
+            key-positions = <20 21>;
+            bindings = <&kp BSPC>;
+        };
+		// tab
+        combo_del {
+            timeout-ms = <100>;
+            key-positions = <22 23>;
+            bindings = <&kp DEL>;
+        };
         // TRIPLE combo mods
 		// 1110 - CONTROL
 		// 0111 - SHIFT
@@ -178,7 +190,7 @@
         flip_layer {
             label = "Flip";
             bindings = <
-            &kp Q    &kp Y    &kp U      &kp L  &kp J   &trans   &trans   &trans    &trans    &trans 
+            &kp SEMI &kp Y    &kp U      &kp L  &kp J   &trans   &trans   &trans    &trans    &trans 
             &kp O    &kp I    &kp E      &kp N  &kp M   &trans   &trans   &trans    &trans    &trans 
             &kp SQT  &kp DOT  &kp COMMA  &kp H  &kp K   &trans   &trans   &trans    &trans    &trans 
                              &trans &trans              &trans   &trans   
