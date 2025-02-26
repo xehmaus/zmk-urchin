@@ -94,7 +94,7 @@
 		// escape
         combo_esc {
             timeout-ms = <100>;
-            key-positions = <0 1>;
+            key-positions = <2 1>;
             bindings = <&kp ESC>;
         };
 		// capsword
@@ -117,7 +117,7 @@
 		// backspace
         combo_bkp {
             timeout-ms = <100>;
-            key-positions = <20 21>;
+            key-positions = <22 21>;
             bindings = <&kp BSPC>;
         };
         // TRIPLE combo mods
@@ -176,7 +176,7 @@
             &lt SYM Q  &kp W  &kp F  &kp P  &kp B      &kp J  &kp L  &kp U     &kp Y   &kp SEMI
             &kp A      &kp R  &kp S  &kp T  &kp G      &kp M  &kp N  &kp E     &kp I   &kp O   
             &lt NUM Z  &kp X  &kp C  &kp D  &kp V      &kp K  &kp H  &kp COMMA &kp DOT &kp SQT
-               &lt NAV RET &lt FLIP SPACE              &kp BSPC &kp DEL       
+               &lt NAV RET &lt FLIP SPACE              &lt SYM BSPC &lt FUN DEL       
 			>;
         };
 		
